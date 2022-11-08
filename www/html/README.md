@@ -1,83 +1,60 @@
-###Online Art Gallery
+# online-shopping-webvsite-in-php
 
-<div id="pgc-576-0-0" class="panel-grid-cell" data-weight="1">
-<div id="panel-576-0-0-1" class="so-panel widget widget_sow-editor" data-index="1" data-style="{&quot;background_display&quot;:&quot;tile&quot;}">
-<div class="so-widget-sow-editor so-widget-sow-editor-base">
-<div class="siteorigin-widget-tinymce textwidget">
+Shopping Cart System is the Simple shopping Solution. It’s a full-featured website and shopping cart system that bends over backwards to give you the flexibility you need to runyour online store.
 
-An art gallery exhibits the works of many artists. Each artist is given a specified space on the online webpage. The artists are charged for the space allotted to them on daily basis. The charges vary in different months. Jan to April and August to December the charges are Rs 200 per day per exhibit, from May to July charges are Rs 300 per day per exhibit. Each exhibit has a name and style of painting. The exhibits can be bought by the online customers who need to register with the art gallery. On receiving the full payment, the painting is sent to the customer. The system keeps track of the status of delivery of the painting to the customer. This status can also be seen by the customer. The gallery also stores the information about the visitors of the gallery who need not register with the art gallery website. For visitors only email id of the visitor is asked. Every month a complete information of business through online site is created for the artists as well as for the site promoters.
-<h3 class="notes">Brief overview of the technology:</h3>
-<div id="pg-2292-0" class="panel-grid panel-no-style">
-<div id="pgc-2292-0-0" class="panel-grid-cell">
-<div id="panel-2292-0-0-0" class="so-panel widget widget_text panel-first-child panel-last-child" data-index="0">
-<div class="textwidget">
+The basic concept of the application is to allow the customer to shop virtually using the Internet and allow customers to buy the items and articles of their desire from the store.
 
-Front end: HTML, CSS, JavaScript
-<ol>
- 	<li>HTML: HTML is used to create and save web document. E.g. Notepad/Notepad++</li>
- 	<li>CSS : (Cascading Style Sheets) Create attractive Layout</li>
- 	<li>Bootstrap : responsive design mobile freindly site</li>
- 	<li>JavaScript: it is a programming language, commonly use with web browsers.</li>
-</ol>
+The information pertaining to the products are stores on an RDBMS at the server side (store). The Server process the customers and the items are shipped to the address submitted by them. The details of the items are brought forward from the database for the customer view based on the selection through the menu and the database of all the products are updated at the end of each transaction.
+
+What is Shopping Cart system ?
+Online shopping is a form of electronic shopping store where the buyer is directly online to the seller’s computer usually via the internet. There is no intermediary service. The sale and purchase transaction is
+completed electronically and interactively in real- time.
+
+The development of this new system contains the following activities, which try to develop on- line
+application by keeping the entire process in the view of database integration approach. User gets its eamil id and password to access their account.
+
+Administrator of Shopping Cart System has multiple features such as Add, Delete, Update shopping Items.
+
+Features of shopping cart
+Secure registration and profile managementfacilities for Customers.
+Browsing through the e-Mall to see the itemsthat are there in each category of products likeApparel, Kitchen accessories,
+Bath accessories, Food items etc.
+Creating a Shopping cart so that customer canShop N number of items and checkout finally withthe entire shopping cart
+Customers should be able to mail the Shopabout the items they would like to see in theShop
+Secured mechanism for checking out from theShop( Credit card verification mechanism).Updates to customers about the Recent Items inthe Shop.
+Uploading Most Purchased Items in eachcategory of products in the Shop like Apparel,Kitchen accessories, Bath accessories,
+Food items etc.
+Brief overview of the technology
+ 
+
+HTML: HTML is used to create and save webdocument. E.g. Notepad/Notepad++
+CSS : (Cascading Style Sheets) Create attractiveLayout
+JavaScript: it is a programming language,commonly use with web browsers.
 Back end: PHP, MySQL
-<ol>
- 	<li>PHP: Hypertext Preprocessor (PHP) is a technology that allows software developers to create dynamically generated web pages, in HTML, XML, or other document types, as per client request. PHP is open source software.</li>
- 	<li>MySQL: MySql is a database, widely used for accessing querying, updating, and managing data in databases.</li>
-</ol>
-<h3 id="requirement" class="notes">Software Requirement(any one)</h3>
-<ul>
- 	<li>WAMP Server</li>
- 	<li>XAMPP Server</li>
- 	<li>MAMP Server</li>
- 	<li>LAMP Server</li>
-</ul>
-<h3 id="installation" class="notes">Installation Steps</h3>
-1. Download zip file and Unzip file on your local server.
-2. Put this file inside "c:/wamp/www/" .
-3. Database Configuration
+
+PHP: Hypertext Preprocessor (PHP) is atechnology that allows software developers tocreate
+dynamically generated web pages, in HTML, XML,or other document types, as per client request.
+PHP is open source software.
+
+MySQL: MySql is a database, widely used foraccessing querying, updating, and managing datain databases.
+Software Requirement(any one)
+WAMP Server
+XAMPP Server
+MAMP Server
+LAMP Server
+Installation Steps
+Download zip file and Unzip file on your local server.
+Put this file inside “c:/wamp/www/” .
+Database Configuration:
 Open phpmyadmin
-Create Database named <strong>art_galley</strong>.sql
-Import database art_gallry.sql from downloaded folder(inside database)
-4. Open Your browser put inside "<a class="vglnk" href="http://localhost/Online_exam_New/" rel="nofollow">http://localhost/project folder/</a>"
+Create Database named “shop”.
+Import database shop.sql.
+Open Your browser put inside URL:
+“http://localhost/store/”
+To Login as admin put inside URL:”http://localhost/store”
+user login details:
+Login Id: yugeshverma@gmail.com
+Password:123456
 
-</div>
-</div>
-<h3>Admin Login</h3>
-</div>
-<ul>
- 	<li>project index url/admin</li>
- 	<li>username- admin@admin.com</li>
- 	<li>password- 12345</li>
-</ul>
-</div>
-<div id="pg-2292-1" class="panel-grid panel-no-style">
-<div id="pgc-2292-1-0" class="panel-grid-cell">
-<div id="panel-2292-1-0-0" class="so-panel widget widget_text panel-first-child panel-last-child" data-index="1">
-<div class="textwidget">
-<div class="" data-lock-id="onpLock358715">
-<h3><a href="https://github.com/projectworlds32/online-art-gallery-in-php/archive/master.zip">Download project</a></h3>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id="panel-576-0-0-2" class="so-panel widget widget_sow-editor" data-index="2">
-<div class="so-widget-sow-editor so-widget-sow-editor-base">
-<div class="siteorigin-widget-tinymce textwidget"></div>
-</div>
-</div>
-</div>
-<div id="pgc-576-0-4" class="panel-grid-cell" data-weight="1">
-<div id="panel-576-0-4-0" class="so-panel widget widget_sow-editor panel-first-child panel-last-child" data-index="9">
-<div class="so-widget-sow-editor so-widget-sow-editor-base">
-<div class="siteorigin-widget-tinymce textwidget">
 
-&nbsp;
-
-</div>
-</div>
-</div>
-</div>
+visit- https://projkectworlds.in
