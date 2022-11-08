@@ -1,90 +1,76 @@
 <?php
-session_start();
-?>
-<!DOCTYPE html>
-<html>
-    <head>
-        <link rel="shortcut icon" href="img/lifestyleStore.png" />
-        <title>My Store</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- latest compiled and minified CSS -->
-        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css">
-        <!-- jquery library -->
-        <script type="text/javascript" src="bootstrap/js/jquery-3.2.1.min.js"></script>
-        <!-- Latest compiled and minified javascript -->
-        <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
-        <!-- External CSS -->
-        <link rel="stylesheet" href="css/style.css" type="text/css">
-    </head>
-    <body>
-        <div>
-           <?php
-            require 'header.php';
-           ?>
-           <div id="bannerImage">
-               <div class="container">
-                   <center>
-                   <div id="bannerContent">
-                       <h1>We sell .</h1>
-                       <p>Flat 40% OFF on all premium brands.</p>
-                       <a href="products.php" class="btn btn-danger">Shop Now</a>
-                   </div>
-                   </center>
-               </div>
-           </div>
-           <div class="container">
-               <div class="row">
-                   <div class="col-xs-4">
-                       <div  class="thumbnail">
-                           <a href="products.php">
-                                <img src="img/camera.jpg" alt="Camera">
-                           </a>
-                           <center>
-                                <div class="caption">
-                                        <p id="autoResize">Cameras</p>
-                                        <p>Choose among the best available in the world.</p>
+	$page="index";
+	$title="Home";
+	require_once('header.php');
+?>		
+		<div class="container-fluid">
+		  <div class="row slider">
+			<div class="col-lg-14">			
+				<div id="myCarousel" class="carousel slide" data-ride="carousel">
+				  <ol class="carousel-indicators">
+					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+					<li data-target="#myCarousel" data-slide-to="1"></li>
+					<li data-target="#myCarousel" data-slide-to="2"></li>
+				  </ol>
+				  <div class="carousel-inner" role="listbox">
+					<div class="item active">
+					  <img src="images/1.jpg" alt="Chania">
+					</div>
+					<div class="item">
+					  <img src="images/2.jpg" alt="Chania">
+					</div>
+					<div class="item">
+					  <img src="images/3.jpg" alt="Flower">
+					</div>
+				  </div>
+				  
+				  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				  </a>
+				  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				  </a>
+				</div>
+			</div>
+		  </div>
+		
+		  <div class="row home_info">
+			<div class="col-md-9 recent_product">
+                <div class="panel panel-default">
+				    <div class="panel-heading">Recent Products</div>
+				        <div class="panel-body">
+                            <div class="container recent_product_container">
+                              <div class="row recent_img">
+                                <div class="col-md-4"><img src="images/Taj%20Mahal.jpeg" class="img-thumbnail home_img" alt="Cinque Terre"></div>
+                                <div class="col-md-4"><img src="images/Mona%20Lisa.png" class="img-thumbnail home_img" alt="Cinque Terre"></div>
+                                <div class="col-md-4"><img src="images/Krishna%20with%20Gopi's.Jpg" class="img-thumbnail home_img" alt="Cinque Terre"></div>
+                              </div>
+                                <div class="row recent_img_desc">
+                                    <div class="col-md-4">Taj Mahal</div>
+                                    <div class="col-md-4">Mona Lisa</div>
+                                    <div class="col-md-4">Krishna with Gopi's</div>
                                 </div>
-                           </center>
-                       </div>
-                   </div>
-                   <div class="col-xs-4">
-                       <div class="thumbnail">
-                           <a href="products.php">
-                               <img src="img/watch.jpg" alt="Watch">
-                           </a>
-                           <center>
-                                <div class="caption">
-                                    <p id="autoResize">Watches</p>
-                                    <p>Original watches from the best brands.</p>
+                                <div class="row recent_img_desc">
+                                    <div class="col-md-4"><button type="button" class="btn-add-cart">Add Cart</button></div>
+                                    <div class="col-md-4"><button type="button" class="btn-add-cart">Add Cart</button></div>
+                                    <div class="col-md-4"><button type="button" class="btn-add-cart">Add Cart</button></div>
                                 </div>
-                           </center>
-                       </div>
-                   </div>
-                   <div class="col-xs-4">
-                       <div class="thumbnail">
-                           <a href="products.php">
-                               <img src="img/shirt.jpg" alt="Shirt">
-                           </a>
-                           <center>
-                               <div class="caption">
-                                   <p id="autoResize">Shirts</p>
-                                   <p>Our exquisite collection of shirts.</p>
-                               </div>
-                           </center>
-                       </div>
-                   </div>
-               </div>
-           </div>
-            <br><br> <br><br><br><br>
-           <footer class="footer"> 
-               <div class="container">
-               <center>
-                   <p>Copyright &copy <a href="https://projectworlds.in">my project</a> Store. All Rights Reserved.</p>
-                   <p>This website is developed by Tibin Yesudas</p>
-               </center>
-               </div>
-           </footer>
-        </div>
-    </body>
-</html>
+                            </div>
+                        </div>
+                </div>
+			</div>
+			<div class="col-md-3 my_cart">
+				<h3>MyCart</h3>
+				<div class="cart_items">
+					<ol>
+                        <li><img src="images/Taj%20Mahal.jpeg" alt="Taj Mahal" class="my_cart_items"> <span class="my_cart_items_title">Taj Mahal</span> <span class="my_cart_items_price">Rs. 250</span></li>
+                    </ol>
+				</div>
+			</div>	
+		  </div>
+<?php
+
+	require('footer.php');
+?>	
