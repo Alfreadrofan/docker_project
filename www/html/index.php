@@ -1,76 +1,72 @@
 <?php
-	$page="index";
-	$title="Home";
-	require_once('header.php');
-?>		
-		<div class="container-fluid">
-		  <div class="row slider">
-			<div class="col-lg-14">			
-				<div id="myCarousel" class="carousel slide" data-ride="carousel">
-				  <ol class="carousel-indicators">
-					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-					<li data-target="#myCarousel" data-slide-to="1"></li>
-					<li data-target="#myCarousel" data-slide-to="2"></li>
-				  </ol>
-				  <div class="carousel-inner" role="listbox">
-					<div class="item active">
-					  <img src="images/1.jpg" alt="Chania">
-					</div>
-					<div class="item">
-					  <img src="images/2.jpg" alt="Chania">
-					</div>
-					<div class="item">
-					  <img src="images/3.jpg" alt="Flower">
-					</div>
-				  </div>
-				  
-				  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-					<span class="sr-only">Previous</span>
-				  </a>
-				  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-					<span class="sr-only">Next</span>
-				  </a>
-				</div>
-			</div>
-		  </div>
-		
-		  <div class="row home_info">
-			<div class="col-md-9 recent_product">
-                <div class="panel panel-default">
-				    <div class="panel-heading">Recent Products</div>
-				        <div class="panel-body">
-                            <div class="container recent_product_container">
-                              <div class="row recent_img">
-                                <div class="col-md-4"><img src="images/Taj%20Mahal.jpeg" class="img-thumbnail home_img" alt="Cinque Terre"></div>
-                                <div class="col-md-4"><img src="images/Mona%20Lisa.png" class="img-thumbnail home_img" alt="Cinque Terre"></div>
-                                <div class="col-md-4"><img src="images/Krishna%20with%20Gopi's.Jpg" class="img-thumbnail home_img" alt="Cinque Terre"></div>
-                              </div>
-                                <div class="row recent_img_desc">
-                                    <div class="col-md-4">Taj Mahal</div>
-                                    <div class="col-md-4">Mona Lisa</div>
-                                    <div class="col-md-4">Krishna with Gopi's</div>
-                                </div>
-                                <div class="row recent_img_desc">
-                                    <div class="col-md-4"><button type="button" class="btn-add-cart">Add Cart</button></div>
-                                    <div class="col-md-4"><button type="button" class="btn-add-cart">Add Cart</button></div>
-                                    <div class="col-md-4"><button type="button" class="btn-add-cart">Add Cart</button></div>
-                                </div>
-                            </div>
-                        </div>
-                </div>
-			</div>
-			<div class="col-md-3 my_cart">
-				<h3>MyCart</h3>
-				<div class="cart_items">
-					<ol>
-                        <li><img src="images/Taj%20Mahal.jpeg" alt="Taj Mahal" class="my_cart_items"> <span class="my_cart_items_title">Taj Mahal</span> <span class="my_cart_items_price">Rs. 250</span></li>
-                    </ol>
-				</div>
-			</div>	
-		  </div>
-<?php
+   include("connection.php");
+   session_start(); // Start the session
+   ?> 
+<!DOCTYPE HTML>
+<html>
+   <head>
+      <title>Online Art Gallery</title>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel="stylesheet" href="assets/css/main.css" />
+      <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+      <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+   </head>
+   <body>
+      <!-- Header -->
+      <header id="header" class="alt" >
+         <div class="logo"><a href="index.php">Online Art Gallery</a></div>
+         <ul class="nav navbar-nav custom-navbar">
+            <li class="active" ><a href="index.php">Home</a></li>
+            <li><a href="index.php?page=customer_register">Customer Register</a></li>
+            <li><a href="index.php?page=contactus">Contact us</a></li>
+         </ul>
+         <a href="#menu">
+            <p class="custom-para">Login</p>
+         </a>
+      </header>
+      <!-- Nav -->
+      <nav id="menu">
+         <ul class="links">
+            <li><a href="index.php?page=customer_login">Customer</a></li>
+            <li><a href="index.php?page=admin_login">Admin</a></li>
+         </ul>
+      </nav>
+      <section>
+         <?php
+            if ( isset( $_GET[ 'page' ] ) ) {
+            
+            	$page_name = $_GET[ 'page' ];
+            
+            	include( "login_register/" . $page_name . ".php" );
+            
+            } else {
+            
+            	include( "login_register/main.php" );
+            
+            }
+            
+            ?>
+      </section>
+<!-- Visit : www.mayurik.com -->
+      <!-- Footer -->
+      <footer id="footer">
+         <div class="container">
+            <ul class="icons">
+               <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+               <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+               <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+               <li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+            </ul>
+         </div>
+         
 
-	require('footer.php');
-?>	
+      </footer>
+      <!-- Scripts -->
+      <script src="assets/js/jquery.min.js"></script>
+      <script src="assets/js/jquery.scrollex.min.js"></script>
+      <script src="assets/js/skel.min.js"></script>
+      <script src="assets/js/util.js"></script>
+      <script src="assets/js/main.js"></script>
+   </body>
+</html>
